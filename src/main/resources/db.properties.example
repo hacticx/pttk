@@ -1,0 +1,6 @@
+# Cau hinh ket noi JDBC (MySQL 8). Co the ghi de bang bien moi truong:
+#   CINEMAN_DB_URL, CINEMAN_DB_USER, CINEMAN_DB_PASSWORD
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/cineman5?useUnicode=true&characterEncoding=UTF-8&connectionCollation=utf8mb4_unicode_ci
+db.user=root
+db.password=

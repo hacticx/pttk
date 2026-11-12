@@ -1,0 +1,68 @@
+/* CineMan - giao dien theo mockup (header xanh navy, thanh menu xanh, nut xanh ngoc) */
+:root {
+  --navy: #14304a;
+  --blue: #235a85;
+  --pale: #e8f0f8;
+  --teal: #1f8a8a;
+  --teal-dark: #176d6d;
+  --line: #c9d6e2;
+  --text: #1c2b39;
+  --muted: #5d6f80;
+  --ok-bg: #e3f4e8; --ok: #1c6b3a;
+  --err-bg: #fdeaea; --err: #a32424;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: #fff; }
+
+.topbar { background: var(--navy); color: #fff; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.topbar .brand { font-size: 26px; font-weight: 700; letter-spacing: .5px; }
+.topbar .brand small { font-weight: 400; font-size: 15px; margin-left: 10px; opacity: .85; }
+.nav { background: var(--blue); padding: 0 16px; display: flex; flex-wrap: wrap; }
+.nav a, .nav span { color: #fff; font-weight: 700; text-decoration: none; padding: 11px 14px; display: block; }
+.nav a:hover { background: rgba(255,255,255,.14); }
+.nav .sep { padding: 11px 0; opacity: .6; font-weight: 400; }
+
+.page { max-width: 1040px; margin: 0 auto; padding: 0 16px 40px; }
+.page-title { background: var(--pale); text-align: center; color: var(--navy); font-size: 21px; font-weight: 700; padding: 14px; margin: 22px 0 6px; }
+.subtitle { text-align: center; font-style: italic; color: var(--muted); margin: 8px 0 18px; }
+.section-title { background: var(--pale); color: var(--navy); font-weight: 700; padding: 9px 12px; margin: 22px 0 10px; border-left: 4px solid var(--teal); }
+
+.btn { display: inline-block; background: var(--teal); color: #fff; border: 0; padding: 10px 20px; font-weight: 700; text-transform: uppercase; font-size: 14px; cursor: pointer; text-decoration: none; border-radius: 2px; }
+.btn:hover { background: var(--teal-dark); }
+.btn.secondary { background: #fff; color: var(--navy); border: 1px solid var(--navy); }
+.btn.secondary:hover { background: var(--pale); }
+.btn[disabled], .btn.disabled { background: #b8c4cf; color: #fff; cursor: not-allowed; }
+.btn.small { padding: 6px 12px; font-size: 13px; }
+
+.field-row { display: flex; align-items: stretch; margin: 10px 0; flex-wrap: wrap; }
+.field-row label { background: var(--pale); padding: 12px 14px; font-weight: 700; min-width: 190px; display: flex; align-items: center; }
+.field-row input[type=text], .field-row input[type=date], .field-row input[type=number], .field-row select, .field-row textarea
+  { flex: 1; min-width: 180px; padding: 10px 12px; border: 1px solid var(--line); font-size: 15px; font-family: inherit; }
+.field-row .btn { margin-left: 8px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+@media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } .field-row label { min-width: 100%; } }
+
+table.data { width: 100%; border-collapse: collapse; margin: 8px 0 14px; }
+table.data th { background: var(--navy); color: #fff; text-align: left; padding: 10px 12px; font-size: 14px; }
+table.data td { padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 15px; }
+table.data tr:hover td { background: #f5f9fc; }
+table.detail th { background: var(--pale); color: var(--navy); width: 170px; text-align: left; padding: 10px 12px; border-bottom: 1px solid #fff; }
+table.detail td { padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.right { text-align: right; } .center { text-align: center; }
+
+.msg { padding: 12px 14px; margin: 14px 0; border-radius: 2px; font-weight: 700; }
+.msg.ok { background: var(--ok-bg); color: var(--ok); border-left: 4px solid var(--ok); }
+.msg.err { background: var(--err-bg); color: var(--err); border-left: 4px solid var(--err); }
+.msg.info { background: var(--pale); color: var(--navy); border-left: 4px solid var(--blue); font-weight: 400; }
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0; align-items: center; }
+.actions .spacer { flex: 1; }
+.tag { display: inline-block; padding: 2px 9px; border-radius: 10px; font-size: 13px; font-weight: 700; background: var(--pale); color: var(--navy); }
+.tag.now { background: var(--ok-bg); color: var(--ok); }
+
+/* Man hinh chinh */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-bottom: 8px; }
+.card { border: 1px solid var(--line); padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.card h3 { margin: 0; font-size: 16px; color: var(--navy); }
+.card p { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+.footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px 0; }

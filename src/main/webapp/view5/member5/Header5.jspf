@@ -1,0 +1,12 @@
+<%-- Thanh tieu de + menu chung. Dat <c:set var="pageHeading"> truoc khi include. --%>
+<div class="topbar">
+  <div class="brand">CINEMAN<c:if test="${not empty pageHeading}"><small>| <c:out value="${pageHeading}"/></small></c:if></div>
+  <%-- Chi hien thi: chua trien khai trang dang nhap --%>
+  <button type="button" class="btn small disabled" disabled title="Chức năng đăng nhập chưa được triển khai">Đăng nhập</button>
+</div>
+<div class="nav">
+  <a href="${ctx}/view5/member5/MainScreen5.jsp">Trang chủ</a><span class="sep">|</span>
+  <a href="${ctx}/view5/customer5/SearchScreen5.jsp">Phim</a><span class="sep">|</span>
+  <a href="${ctx}/view5/manager5/ScheduleListScreen5.jsp">Lịch chiếu</a><span class="sep">|</span>
+  <span title="Chức năng tài khoản chưa được triển khai">Tài khoản</span>
+</div>
